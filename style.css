@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --LightRed: hsl(0, 100%, 67%);
+
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --OffWhite: hsl(0, 0%, 94%);
+  --LightGrey: hsl(0, 0%, 86%);
+  --SmokeyGrey: hsl(0, 1%, 44%);
+  --OffBlack: hsl(0, 0%, 8%);
+  /* Font */
+  --font-size: 48px;
+  --font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--LightGrey);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family);
+}
+.container {
+  width: 90%;
+  margin: auto;
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 13px 13px 46px 13px;
+}
+@media (min-width: 600px) {
+  .container {
+    max-width: 550px;
+    border-radius: 13px 13px 80px 13px;
+  }
+}
+.container form {
+  margin-bottom: 3rem;
+}
+.container form .inputs {
+  position: relative;
+  display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--OffWhite);
+  /* width: 70%; */
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .container form .inputs,
+  main > span {
+    width: 87%;
+    margin: auto;
+  }
+}
+
+.container .input-field label {
+  color: var(--SmokeyGrey);
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 0.3cap;
+  font-size: 14px;
+}
+@media (min-width: 600px) {
+  .container .input-field label {
+    display: block;
+  }
+}
+.container .input-field input {
+  outline: none;
+  border: 1px solid var(--OffWhite);
+  width: 85px;
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 6px;
+}
+@media (min-width: 600px) {
+  .container .input-field input {
+    display: block;
+    width: 127px;
+  }
+}
+.input-error {
+  margin-top: 3px;
+  color: var(--LightRed);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.container button {
+  position: absolute;
+  left: 50%;
+  bottom: -52px;
+  transform: translate(-50%, -50%);
+  background-color: var(--Purple);
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+}
+.container button:hover {
+  background-color: var(--OffBlack);
+}
+@media (min-width: 600px) {
+  .container button {
+    left: 99%;
+    bottom: -50px;
+  }
+}
+.container button > img {
+  width: 21px;
+}
+main > span {
+  display: block;
+
+  font-size: var(--font-size);
+  color: var(--OffBlack);
+  font-weight: 800;
+  font-style: italic;
+}
+main > span > span {
+  color: var(--Purple);
+}
+
+@media (min-width: 600px) {
+  main > span,
+  main > span > span {
+    font-size: 52px;
+  }
+}
